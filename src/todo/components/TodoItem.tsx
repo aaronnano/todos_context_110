@@ -17,7 +17,7 @@ export const TodoItem = ({ todo }: props) => {
         toggleTodo({ id: todo.id })
     }
     const onEditTodo = () => {
-        if( todo.id === selectedTodo?.id ){
+        if( todo.id === selectedTodo?.id ){ // Dejar de seleccionarlo
             selectTodo( null ); return 
         }
         selectTodo( todo )
@@ -31,10 +31,11 @@ export const TodoItem = ({ todo }: props) => {
     const colorEdit = selectedTodo?.id === todo.id ? 'danger' : 'warning'
 
     return (
-        <li className={`list-group-item d-flex justify-content-between align-items-center py-3 mb-3 border ${ todoSelectedColor }`}
+        <li className={`list-group-item d-flex justify-content-between 
+        align-items-center py-3 mb-3 border ${ todoSelectedColor }`}
             // style={{ outline: todoSelectedColor }}
         >
-            <div className={`w-75 ${ todo.completed ? 'text-success fw-bold' : ''}`} role='button'
+            <div className={`flex-fill ${ todo.completed ? 'text-success fw-bold' : ''}`} role='button'
                 onClick={ onToggleTodo }
             >
                 { todo.desc }

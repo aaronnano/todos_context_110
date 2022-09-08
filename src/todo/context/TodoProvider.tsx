@@ -50,7 +50,6 @@ export const TodoProvider = ({ children }: props ) => {
         // addTodo,
         ...dispatches
     }
-
     
     return (
         <TodoContext.Provider value={store}>

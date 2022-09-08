@@ -1,4 +1,3 @@
-import { SyntheticEvent } from "react"
 import { useTodos } from "../hooks/useTodos"
 import { TodoItem } from "./TodoItem"
 
