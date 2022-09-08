@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy":" tsc && vite build && git add dist -f && git commit -m'hosting'  && git subtree push --prefix dist origin gh-pages"
+
   },
   "dependencies": {
     "@types/uuid": "^8.3.4",
